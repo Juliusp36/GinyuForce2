@@ -1,119 +1,210 @@
 {
-    "users": [
-     "Greg",
-     "Jerry",
-     "Ansh",
-     "Tre",
-     "Sophie",
-     "Jonah",
-     "Mya",
-     "Victor",
-     "Edward",
-     "Jennifer",
-     "Mary",
-     "Vincent",
-     "Oliva",
-     "Elza",
-     "Monterio",
-     "Mari",
-     "Miles"
-    ],
-    "movies": [
-     "The Shawshank Redemption",
-     "The Godfather",
-     "The Dark Knight",
-     "The Godfather Part 2",
-     "The Lord of the Rings: The Return of the King",
-     "Angry Men",
-     "Schindler's List",
-     "The Lord of the Rings: The Fellowship of the Ring",
-     "Pulp Fiction",
-     "The Lord of the Rings: The Two Towers",
-     "The Good, the Bad, and the Ugly",
-     "Forrest Gump",
-     "Fight Club",
-     "Inception",
-     "Star Wars: Episode V - The Empire Strikes Back",
-     "The Matrix",
-     "Interstellar",
-     "Life is Beautiful",
-     "Terminator 2: Judgment Day",
-     "Back to the Future",
-     "Star Wars: Episode IV - A New Hope",
-     "Spirited Away",
-     "Kill Bill: The Whole Bloody Affair",
-     "Gladiator",
-     "The Painist",
-     "Parasite",
-     "Grave of the Fireflies",
-     "Harakiri",
-     "Psycho",
-     "The Lion King",
-     "American History X",
-     "Spider-Man: Across the Spider-Verse",
-     "Leon: The Professional",
-     "Cinema Paradiso",
-     "Casablanca",
-     "The Intouchables",
-     "The Usual Suspects",
-     "Django Unchained"   
-    ],
-    "Rating": {
-        "Greg": {
-            "The Shawshank Redemption": 9,
-            "The Lion King": 8,
-            "American History X": 6,
-            "Casablanca": 7,
-            "Leon: The Professional": 3
-        }
-        "Jerry": {
-
-        }
-        "Ansh": {
-
-        }
-        "Tre": {
-
-        }
-        "Sophie": {
-
-        }
-        "Jonah": {
-
-        }
-        "Mya": {
-
-        }
-        "Victor": {
-
-        }
-        "Edward": {
-
-        }
-        "Jennifer": {
-
-        }
-        "Mary": {
-
-        }
-        "Vincent": {
-
-        }
-        "Oliva": {
-
-        }
-        "Elza": {
-
-        }
-        "Monterio": {
-
-        }
-        "Mari": {
-
-        }
-        "Miles": {
-            
-        }
+  "users": [
+    "Greg",
+    "Jerry",
+    "Ansh",
+    "Tre",
+    "Sophie",
+    "Jonah",
+    "Mya",
+    "Victor",
+    "Edward",
+    "Jennifer",
+    "Mary",
+    "Vincent",
+    "Oliva",
+    "Elza",
+    "Monterio",
+    "Mari",
+    "Miles"
+  ],
+  "movies": [
+    "The Shawshank Redemption",
+    "The Godfather",
+    "The Dark Knight",
+    "The Godfather Part 2",
+    "The Lord of the Rings: The Return of the King",
+    "Angry Men",
+    "Schindler's List",
+    "The Lord of the Rings: The Fellowship of the Ring",
+    "Pulp Fiction",
+    "The Lord of the Rings: The Two Towers",
+    "The Good, the Bad, and the Ugly",
+    "Forrest Gump",
+    "Fight Club",
+    "Inception",
+    "Star Wars: Episode V - The Empire Strikes Back",
+    "The Matrix",
+    "Interstellar",
+    "Life is Beautiful",
+    "Terminator 2: Judgment Day",
+    "Back to the Future",
+    "Star Wars: Episode IV - A New Hope",
+    "Spirited Away",
+    "Kill Bill: The Whole Bloody Affair",
+    "Gladiator",
+    "The Painist",
+    "Parasite",
+    "Grave of the Fireflies",
+    "Harakiri",
+    "Psycho",
+    "The Lion King",
+    "American History X",
+    "Spider-Man: Across the Spider-Verse",
+    "Leon: The Professional",
+    "Cinema Paradiso",
+    "Casablanca",
+    "The Intouchables",
+    "The Usual Suspects",
+    "Django Unchained"
+  ],
+  "ratings": {
+    "Greg": {
+      "The Shawshank Redemption": 9,
+      "The Lion King": 8,
+      "American History X": 6,
+      "Casablanca": 7,
+      "Leon: The Professional": 3
+    },
+    "Jerry": {
+      "The Godfather": 2,
+      "Life is Beautiful": 9,
+      "The Matrix": 2,
+      "Star Wars: Episode V - The Empire Strikes Back": 10,
+      "Pulp Fiction": 7
+    },
+    "Ansh": {
+      "The Godfather": 10,
+      "Angry Men": 1,
+      "Inception": 9,
+      "Star Wars: Episode V - The Empire Strikes Back": 4,
+      "Leon: The Professional": 9
+    },
+    "Tre": {
+      "Star Wars: Episode V - The Empire Strikes Back": 3,
+      "Psycho": 4,
+      "Life is Beautiful": 6,
+      "The Shawshank Redemption": 2,
+      "The Good, the Bad, and the Ugly": 2,
+      "Harakiri": 7,
+      "Spirited Away": 2,
+      "Pulp Fiction": 6
+    },
+    "Sophie": {
+      "Interstellar": 9,
+      "The Dark Knight": 5,
+      "The Lion King": 10,
+      "Casablanca": 6,
+      "The Lord of the Rings: The Fellowship of the Ring": 10,
+      "The Painist": 4,
+      "Angry Men": 2
+    },
+    "Jonah": {
+      "Star Wars: Episode V - The Empire Strikes Back": 5,
+      "Terminator 2: Judgment Day": 8,
+      "Angry Men": 6,
+      "Schindler's List": 3,
+      "The Painist": 6
+    },
+    "Mya": {
+      "Inception": 7,
+      "Life is Beautiful": 5,
+      "The Lord of the Rings: The Return of the King": 9,
+      "The Good, the Bad, and the Ugly": 4,
+      "The Matrix": 6,
+      "Casablanca": 1,
+      "The Lion King": 4
+    },
+    "Victor": {
+      "Star Wars: Episode IV - A New Hope": 10,
+      "Parasite": 6,
+      "Life is Beautiful": 4,
+      "The Lord of the Rings: The Return of the King": 8,
+      "Inception": 7
+    },
+    "Edward": {
+      "The Lord of the Rings: The Two Towers": 4,
+      "Interstellar": 3,
+      "Pulp Fiction": 9,
+      "The Matrix": 8,
+      "The Usual Suspects": 2,
+      "Harakiri": 1,
+      "Parasite": 2,
+      "Forrest Gump": 3
+    },
+    "Jennifer": {
+      "Harakiri": 9,
+      "The Lord of the Rings: The Return of the King": 1,
+      "The Painist": 2,
+      "The Intouchables": 9,
+      "The Lion King": 5,
+      "Interstellar": 6
+    },
+    "Mary": {
+      "Terminator 2: Judgment Day": 5,
+      "Harakiri": 9,
+      "The Good, the Bad, and the Ugly": 3,
+      "The Lion King": 9,
+      "The Shawshank Redemption": 2
+    },
+    "Vincent": {
+      "Leon: The Professional": 8,
+      "Fight Club": 1,
+      "The Lord of the Rings: The Two Towers": 2,
+      "Gladiator": 6,
+      "The Good, the Bad, and the Ugly": 5,
+      "The Shawshank Redemption": 4,
+      "Star Wars: Episode IV - A New Hope": 1
+    },
+    "Oliva": {
+      "The Usual Suspects": 3,
+      "Angry Men": 8,
+      "Django Unchained": 9,
+      "Spider-Man: Across the Spider-Verse": 3,
+      "The Lord of the Rings: The Return of the King": 5,
+      "Pulp Fiction": 9
+    },
+    "Elza": {
+      "Harakiri": 9,
+      "Inception": 8,
+      "Casablanca": 2,
+      "Fight Club": 4,
+      "Back to the Future": 4,
+      "Parasite": 2,
+      "Gladiator": 6,
+      "Star Wars: Episode V - The Empire Strikes Back": 1,
+      "Psycho": 10
+    },
+    "Monterio": {
+      "Star Wars: Episode V - The Empire Strikes Back": 6,
+      "Django Unchained": 2,
+      "The Shawshank Redemption": 9,
+      "The Lord of the Rings: The Return of the King": 4,
+      "The Godfather Part 2": 5,
+      "The Usual Suspects": 8,
+      "Casablanca": 4,
+      "Psycho": 9,
+      "The Godfather": 3
+    },
+    "Mari": {
+      "The Usual Suspects": 7,
+      "American History X": 6,
+      "The Matrix": 7,
+      "Django Unchained": 7,
+      "Grave of the Fireflies": 8,
+      "Fight Club": 1,
+      "Schindler's List": 2,
+      "The Godfather Part 2": 1,
+      "Spirited Away": 7
+    },
+    "Miles": {
+      "Schindler's List": 3,
+      "The Matrix": 5,
+      "Fight Club": 8,
+      "The Intouchables": 4,
+      "Psycho": 2,
+      "Pulp Fiction": 8,
+      "Harakiri": 9
     }
-    
+  }
 }
