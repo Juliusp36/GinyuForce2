@@ -1,4 +1,23 @@
 {
+    "users": [
+     "Greg",
+     "Jerry",
+     "Ansh",
+     "Tre",
+     "Sophie",
+     "Jonah",
+     "Mya",
+     "Victor",
+     "Edward",
+     "Jennifer",
+     "Mary",
+     "Vincent",
+     "Oliva",
+     "Elza",
+     "Monterio",
+     "Mari",
+     "Miles"
+    ],
     "movies": [
      "The Shawshank Redemption",
      "The Godfather",
@@ -51,5 +70,5 @@
      "The Usual Suspects",
      "Django Unchained"   
     ]
- 
+
 }
