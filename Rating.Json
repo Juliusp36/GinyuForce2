@@ -36,15 +36,6 @@
      "Star Wars: Episode V - The Empire Strikes Back",
      "The Matrix",
      "Interstellar",
-     "GoodFellas",
-     "One Flew Over the Cuckoo's Nest",
-     "Seven", 
-     "It's a Wonderful Life",
-     "The Silence of the Lambs",
-     "Saving Private Ryan",
-     "Seven Samurai",
-     "The Green Mile",
-     "City of God",
      "Life is Beautiful",
      "Terminator 2: Judgment Day",
      "Back to the Future",
@@ -58,9 +49,6 @@
      "Harakiri",
      "Psycho",
      "The Lion King",
-     "The Departed",
-     "Whiplash",
-     "The Prestige",
      "American History X",
      "Spider-Man: Across the Spider-Verse",
      "Leon: The Professional",
@@ -69,6 +57,63 @@
      "The Intouchables",
      "The Usual Suspects",
      "Django Unchained"   
-    ]
+    ],
+    "Rating": {
+        "Greg": {
+            "The Shawshank Redemption": 9,
+            "The Lion King": 8,
+            "American History X": 6,
+            "Casablanca": 7,
+            "Leon: The Professional": 3
+        }
+        "Jerry": {
 
+        }
+        "Ansh": {
+
+        }
+        "Tre": {
+
+        }
+        "Sophie": {
+
+        }
+        "Jonah": {
+
+        }
+        "Mya": {
+
+        }
+        "Victor": {
+
+        }
+        "Edward": {
+
+        }
+        "Jennifer": {
+
+        }
+        "Mary": {
+
+        }
+        "Vincent": {
+
+        }
+        "Oliva": {
+
+        }
+        "Elza": {
+
+        }
+        "Monterio": {
+
+        }
+        "Mari": {
+
+        }
+        "Miles": {
+            
+        }
+    }
+    
 }
