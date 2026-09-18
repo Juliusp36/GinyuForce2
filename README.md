@@ -21,6 +21,6 @@ So far, there is a json file with users and their ratings for specific movies. N
     + More data fields theoreticall make it easier to reccomend movies to users
   + We would then produce matrix approximations to fill in the gaps for movies that users did not rate themselves
 ### Presentation 
-I propose a simple Python interface using FastAPI(backend) and React(Frontend) that has a login and create account page that shows the user their ratings, approximates (i.e. what they might like or their possible ratings). We could display movie posters and descriptions when the user clicks on it. This can be achieved by filling our database with requests to the OMDB API which contains a database of movies which can give us the fields we need, and poster images. 
+I propose a simple Python interface using FastAPI(backend) and React(Frontend) that has a login and create account page that shows the user their ratings, approximates (i.e. what they might like or their possible ratings). We could display movie posters and descriptions when the user clicks on it. This can be achieved by filling our database with requests to the **OMDB API** which contains a database of movies which can give us the fields we need, and poster images. 
 ### Difficulties
 Matrix approximation because it is the only thing in this project that either of us has no experience in
