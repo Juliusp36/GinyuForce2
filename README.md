@@ -32,3 +32,7 @@ take reccomendations from a large dataset with a large number of users. Using, S
 After doing a bit of searching online, I found the SciPy Sparse SVD (scipy.sparse.linalg.svds). Essentially this would break down our large table into 3 smaller dense matrices. These three matrices have difference approximations (i.e. they sort our data via different things). Multiplying this matrix back together would then give us a matrix which has all of the movies filled with ratings, hence 'reccomending' users movies based on the ratings they have not rated.
 
 We have a basic table, it may be smart to add a column or some functionality that tracks the movies, the user has actually rated so we don't reccomend the wrong movies. Perhaps an override feature would be useful so that the user can go back and edit their movie ratings. 
+
+## Citation
+Dataset comes from MovieLens 100k
+https://grouplens.org/datasets/movielens/100k/
