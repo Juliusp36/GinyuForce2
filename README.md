@@ -33,6 +33,6 @@ After doing a bit of searching online, I found the SciPy Sparse SVD (scipy.spars
 
 We have a basic table, it may be smart to add a column or some functionality that tracks the movies, the user has actually rated so we don't reccomend the wrong movies. Perhaps an override feature would be useful so that the user can go back and edit their movie ratings. 
 
-## Citation
+## Citations
 Dataset comes from MovieLens 100k
 https://grouplens.org/datasets/movielens/100k/
