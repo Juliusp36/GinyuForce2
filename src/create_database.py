@@ -2,9 +2,9 @@ import sqlite3
 import pandas as pd 
 import zipfile
 from pathlib import Path
+import random
 
-conn = sqlite3.connect('movielens.db')
-
+conn = sqlite3.connect("movielens.db")
 # Open MovieLens dataset
 zip_path = Path(__file__).resolve().parent.parent / "ml-100k.zip"
 
@@ -38,6 +38,18 @@ with zipfile.ZipFile(zip_path) as z:
         sep='|',
         names=['user_id', 'age', 'gender', 'occupation', 'zip_code']
     )
+
+    # Generate random usernames
+    first_names = ['James', 'Emma', 'Michael', 'Olivia', 'Daniel', 'Sophia', 'David', 'Ava']
+    last_names = ['Smith', 'Johnson', 'Brown', 'Williams', 'Jones', 'Davis', 'Wilson']
+
+    random.seed(42)
+
+    users['username'] = [
+        f"{random.choice(first_names).lower()}_{random.choice(last_names).lower()}{user_id}"
+        for user_id in users['user_id']
+    ]
+
     users.to_sql('users', conn, if_exists='replace', index=False)
 
 # Movie poster table - coming from a github repository which has the poster links for each movie in the database
