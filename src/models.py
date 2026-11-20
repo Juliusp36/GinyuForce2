@@ -14,3 +14,13 @@ def bias_baseline(R):
     b_item[has_rating] = (
         np.nansum(residual, axis=0)[has_rating] / n_item[has_rating])
     return mu, b_user, b_item
+
+def baseline_matrix(R):
+    """Full matrix of baseline predictions mu + b_user + b_item."""
+    mu, b_user, b_item = bias_baseline(R)
+    return mu + b_user[:, None] + b_item[None, :]
+
+
+def rank_k(U, s, Vt, k):
+    """Rank-k matrix from an SVD that was already computed."""
+    return U[:, :k] @ np.diag(s[:k]) @ Vt[:k, :]
