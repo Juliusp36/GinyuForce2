@@ -10,6 +10,8 @@ Run the following script
 python3 src/backend/import_movie_genres.py
 ```
 
+What this will do is add a genres table to the database with the columns 'movie_id' and 'genre'. movies can have multiple genres.
+
 # Math 
 
 Run the following code to compute the math for the project. NOTE: this will predict over 1 million ratings for users, making it very close to githubs 100 MiB storage limit. It may be smart to omit or reduce the amount of new users created:
