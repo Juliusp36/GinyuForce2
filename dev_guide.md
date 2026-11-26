@@ -2,6 +2,14 @@
 
 The backend consists of an API and database. Check the schema for the database within the 'db' file located in the '/backend' directory. This will primarily be a guide to the API. 
 
+# Adding Genres to the database
+
+Run the following script
+
+```text
+python3 src/backend/import_movie_genres.py
+```
+
 # Math 
 
 Run the following code to compute the math for the project. NOTE: this will predict over 1 million ratings for users, making it very close to githubs 100 MiB storage limit. It may be smart to omit or reduce the amount of new users created:
