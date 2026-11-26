@@ -2,7 +2,7 @@
 import sqlite3
 from flask import Flask, jsonify, request
 from flask_cors import CORS
-from db_config import DB_PATH
+from db_config import DB_PATH, execute_query
 from user import User
 from movie import Movie
 from rating import Rating
@@ -119,9 +119,38 @@ def delete_user(user_id):
 @app.get('/api/movies')
 def movies():
     limit, offset = paging()
+
     title = request.args.get('search', '').strip()
+    genre = request.args.get('genre', '').strip()
+
+    # Filter movies by genre if provided
+    if genre:
+        query = """
+            SELECT m.*
+            FROM movies m
+            JOIN movie_genres g
+                ON m.movie_id = g.movie_id
+            WHERE g.genre = ? COLLATE NOCASE
+        """
+
+        params = [genre]
+
+        # Allow searching by title and genre together
+        if title:
+            query += " AND m.title LIKE ?"
+            params.append(f"%{title}%")
+
+        query += " ORDER BY m.movie_id LIMIT ? OFFSET ?"
+        params.extend([limit, offset])
+
+        return respond(
+            execute_query(query, tuple(params), fetch=True)
+        )
+
+    # Preserve existing movie search functionality
     if title:
         return respond(Movie.search(title, limit))
+
     return respond(Movie.get_all(limit, offset))
 
 
@@ -202,6 +231,90 @@ def delete_rating(user_id, movie_id):
     if not Rating.delete(user_id, movie_id):
         return jsonify({'error': 'Rating not found'}), 404
     return '', 204
+
+@app.get('/api/genres')
+def get_genres():
+    genres = execute_query(
+        """
+        SELECT DISTINCT genre
+        FROM movie_genres
+        ORDER BY genre
+        """,
+        fetch=True
+    )
+
+    return respond(genres)
+
+
+@app.get('/api/users/<int:user_id>/recommendations')
+def recommendations(user_id):
+
+    # Verify that the user exists
+    if not User.get_by_id(user_id):
+        return jsonify({'error': 'User not found'}), 404
+
+    # Get pagination and optional genre
+    limit, offset = paging()
+    genre = request.args.get('genre', '').strip()
+
+    # Retrieve predicted ratings and movie information
+    query = """
+        SELECT
+            m.movie_id,
+            m.title,
+            m.release_date,
+            p.predicted_rating,
+            mp.poster_url
+
+        FROM predicted_ratings p
+
+        JOIN movies m
+            ON p.movie_id = m.movie_id
+
+        LEFT JOIN movie_posters mp
+            ON m.movie_id = mp.movie_id
+
+        WHERE p.user_id = ?
+
+        AND NOT EXISTS (
+            SELECT 1
+            FROM ratings r
+            WHERE r.user_id = p.user_id
+            AND r.movie_id = p.movie_id
+        )
+    """
+
+    params = [user_id]
+
+    # Filter recommendations by genre if provided
+    if genre:
+        query += """
+            AND EXISTS (
+                SELECT 1
+                FROM movie_genres g
+                WHERE g.movie_id = p.movie_id
+                AND g.genre = ? COLLATE NOCASE
+            )
+        """
+
+        params.append(genre)
+
+    # Rank movies from highest to lowest predicted rating
+    query += """
+        ORDER BY p.predicted_rating DESC, m.movie_id
+        LIMIT ? OFFSET ?
+    """
+
+    params.extend([limit, offset])
+
+    # Execute the SQL query
+    results = execute_query(
+        query,
+        tuple(params),
+        fetch=True
+    )
+
+    return respond(results)
 
 
 if __name__ == '__main__':
