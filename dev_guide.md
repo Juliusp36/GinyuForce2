@@ -56,7 +56,8 @@ python3 app.py
 + /api/users
 + /api/movies 
 + /api/ratings 
-+ /api/posers 
++ /api/posers
++ /api/users/[#]/recommendations
 
 ## Other Methods 
 
@@ -74,3 +75,13 @@ GET /api/ratings/user/1 # Get the ratings entered by user 1
 + movies - R
 + ratings - CRUD 
 + movie_posters - R
+
+## Example API Queries
+
+In the frontend, one would query the API to access the specific records needed for teh task.
+
+/api/users/1/recommendations?genre=Action&limit=5	- Top 5 action movies
+/api/users/1/recommendations?genre=Comedy&limit=10	- Top 10 comedy movies
+/api/users/1/recommendations?genre=Drama&limit=15	- Top 15 drama movies
+/api/users/1/recommendations?genre=Sci-Fi&limit=20	- Top 20 sci-fi movies
+/api/users/1/recommendations?limit=10 - Top 10 movies regardless of genre
