@@ -38,3 +38,49 @@ We have a basic table, it may be smart to add a column or some functionality tha
 
 Dataset comes from MovieLens 100k
 https://grouplens.org/datasets/movielens/100k/
+
+## Setup (one time)
+
+Requires Python 3 and Node.js LTS (https://nodejs.org).
+
+```powershell
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+pip install -r src/backend/requirements.txt
+pip install scipy numpy pandas
+cd src/frontend
+npm install
+```
+## Run the app
+
+Use two terminals.
+
+**Terminal 1: backend** (from the repo root, venv active)
+
+```powershell
+python src/backend/app.py
+```
+
+**Terminal 2: frontend**
+
+```powershell
+cd src/frontend
+npm run dev
+```
+
+Open http://localhost:5173.
+
+## Logging in
+
+- Existing users: get a username from http://127.0.0.1:5001/api/users?limit=5
+- New users: click "Create account", then rate 10 movies.
+
+## Regenerating predictions
+
+Run after new ratings are added (stop the backend first):
+
+```powershell
+cd src
+python build_svd_predictions.py
+python import_svd_predictions.py
+```
