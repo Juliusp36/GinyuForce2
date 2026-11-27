@@ -1,0 +1,21 @@
+body { margin: 0; font-family: system-ui, sans-serif; background: #14161a; color: #eee; }
+nav { display: flex; gap: 16px; align-items: center; padding: 12px 24px; background: #1d2026; }
+nav a { color: #aaa; text-decoration: none; }
+nav a.active { color: #fff; font-weight: 600; }
+.spacer { flex: 1; }
+main { padding: 24px; }
+.toolbar { display: flex; gap: 12px; margin-bottom: 16px; }
+input, select, button { padding: 8px 10px; border-radius: 6px; border: 1px solid #444; background: #23272f; color: #eee; }
+button { cursor: pointer; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 16px; margin-top: 16px; }
+.card { background: #1d2026; border-radius: 8px; padding: 10px; }
+.card img, .no-poster { width: 100%; aspect-ratio: 2 / 3; object-fit: cover; border-radius: 6px; background: #2a2e36; display: grid; place-items: center; color: #777; }
+.title { font-size: 14px; margin: 8px 0 4px; }
+.muted { color: #999; font-size: 12px; margin: 0 0 4px; }
+.pager { display: flex; gap: 12px; justify-content: center; align-items: center; margin-top: 24px; }
+.login { max-width: 300px; margin: 80px auto; display: flex; flex-direction: column; gap: 12px; }
+.error { color: #ff6b6b; }
+.logo { display: block; mix-blend-mode: lighten; }
+.brand { display: flex; align-items: center; }
+.login { align-items: center; }
+.login input, .login button { width: 100%; box-sizing: border-box; }
